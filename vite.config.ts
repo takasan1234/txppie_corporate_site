@@ -4,7 +4,6 @@
   import path from 'path';
 
   export default defineConfig({
-    base: '/txppie_corporate_site/',
     plugins: [react()],
     resolve: {
       alias: {

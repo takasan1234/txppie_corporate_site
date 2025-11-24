@@ -25,6 +25,7 @@ This project is configured for automatic deployment to GitHub Pages using GitHub
 
 3. **Access your site:**
    - Your site will be available at `https://yourusername.github.io/txppie_corporate_site/`
+   - Or with a custom domain if configured
 
 ### Manual Deployment
 
@@ -36,6 +37,6 @@ npm run deploy
 
 ### Configuration
 
-- **Base Path:** Configured for repository name `txppie_corporate_site`
+- **Base Path:** Root path (/) for flexible deployment
 - **Output Directory:** `docs` (GitHub Pages compatible)
 - **Asset Optimization:** Enabled for static hosting  
