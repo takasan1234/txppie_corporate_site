@@ -1,6 +1,6 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import logoImage from 'figma:asset/18a91d08cf9a9d8b2794072b0e03df58b07f146b.png';
+import logoImage from '@/assets/18a91d08cf9a9d8b2794072b0e03df58b07f146b.png';
 
 interface HeaderProps {
   onNavigate?: (page: string) => void;

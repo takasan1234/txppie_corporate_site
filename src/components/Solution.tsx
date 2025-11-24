@@ -1,7 +1,7 @@
 import { Database, Rocket } from "lucide-react";
-import businessFlowImage from 'figma:asset/65f23dc7b3251d3fe7ee176ea7d373999660f8c7.png';
-import voiceAtlasFeaturesImage from 'figma:asset/281bb3982641e056aa08f60f38a73009cc20fc00.png';
-import processFlowImage from 'figma:asset/26e635c9fd4dcec3cd3005781af01c292f934752.png';
+import businessFlowImage from '@/assets/65f23dc7b3251d3fe7ee176ea7d373999660f8c7.png';
+import voiceAtlasFeaturesImage from '@/assets/281bb3982641e056aa08f60f38a73009cc20fc00.png';
+import processFlowImage from '@/assets/26e635c9fd4dcec3cd3005781af01c292f934752.png';
 
 export function Solution() {
   return (

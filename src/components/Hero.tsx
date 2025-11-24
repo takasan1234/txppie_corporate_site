@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
-import voiceAtlasLogo from 'figma:asset/32594166e15459267cac7282a4e526062ff0bd88.png';
+import voiceAtlasLogo from '@/assets/32594166e15459267cac7282a4e526062ff0bd88.png';
 
 export function Hero() {
   return (

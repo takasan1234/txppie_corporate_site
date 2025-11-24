@@ -1,4 +1,4 @@
-import ceoImage from 'figma:asset/723e337fc4a3b4fb4bc5c6c6ed5a0e2b55f76633.png';
+import ceoImage from '@/assets/723e337fc4a3b4fb4bc5c6c6ed5a0e2b55f76633.png';
 
 export function CeoMessage() {
   const messages = [

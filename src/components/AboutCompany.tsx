@@ -1,4 +1,4 @@
-import txppieImage from 'figma:asset/d1e0fbf0ae66cf922d2f729ec222f4313efbcb87.png';
+import txppieImage from '@/assets/d1e0fbf0ae66cf922d2f729ec222f4313efbcb87.png';
 
 export function AboutCompany() {
   return (

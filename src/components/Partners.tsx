@@ -1,6 +1,6 @@
-import innovatorsClubImage from 'figma:asset/0d03dbbc4d108679ab134f4f21435023b2792b46.png';
-import boomingImage from 'figma:asset/12d0c62dd9329ae15854ac09fe077f31f5e50e62.png';
-import soilImage from 'figma:asset/5825deb48bca712e5a90a4440ee62cfb6d5edab6.png';
+import innovatorsClubImage from '@/assets/0d03dbbc4d108679ab134f4f21435023b2792b46.png';
+import boomingImage from '@/assets/12d0c62dd9329ae15854ac09fe077f31f5e50e62.png';
+import soilImage from '@/assets/5825deb48bca712e5a90a4440ee62cfb6d5edab6.png';
 
 export function Partners() {
   const programs = [

@@ -1,6 +1,6 @@
-import ceoImage from 'figma:asset/723e337fc4a3b4fb4bc5c6c6ed5a0e2b55f76633.png';
-import cooImage from 'figma:asset/204517a18a3320cd38bf27601f0deb5077de2196.png';
-import advisorImage from 'figma:asset/cf74f57f0f14e2c48b927a28037ec5284b06294f.png';
+import ceoImage from '@/assets/723e337fc4a3b4fb4bc5c6c6ed5a0e2b55f76633.png';
+import cooImage from '@/assets/204517a18a3320cd38bf27601f0deb5077de2196.png';
+import advisorImage from '@/assets/cf74f57f0f14e2c48b927a28037ec5284b06294f.png';
 
 export function CoreMembers() {
   const members = [
