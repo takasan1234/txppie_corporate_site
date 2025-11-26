@@ -1,5 +1,5 @@
 import innovatorsClubImage from '@/assets/0d03dbbc4d108679ab134f4f21435023b2792b46.png';
-import boomingImage from '@/assets/12d0c62dd9329ae15854ac09fe077f31f5e50e62.png';
+import boomingImage from '@/assets/c6710.jpg';
 import soilImage from '@/assets/5825deb48bca712e5a90a4440ee62cfb6d5edab6.png';
 
 export function Partners() {
@@ -42,7 +42,7 @@ export function Partners() {
               className="group bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-6 sm:gap-8 hover:border-[#00897B]/50 hover:shadow-xl transition-all"
             >
               {/* ロゴ */}
-              <div className="flex-shrink-0 w-32 h-20 sm:w-40 sm:h-24 flex items-center justify-center bg-white rounded-xl overflow-hidden group-hover:bg-gray-50 transition-colors">
+              <div className="flex-shrink-0 w-48 h-32 sm:w-40 sm:h-24 flex items-center justify-center bg-white rounded-xl overflow-hidden group-hover:bg-gray-50 transition-colors">
                 <img 
                   src={program.image} 
                   alt={program.name} 
