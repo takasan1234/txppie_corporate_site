@@ -32,7 +32,7 @@ export function Header({ onNavigate }: HeaderProps) {
           <div className="flex items-center">
             <a href="#" onClick={handleLogoClick} className="flex items-center gap-3 group">
               {/* ロゴ画像 */}
-              <img src={logoImage} alt="TxPPIE Logo" className="h-10 w-auto object-contain transition-transform group-hover:scale-105" />
+              <img src={logoImage} alt="TxPPIE株式会社" className="h-10 w-auto object-contain transition-transform group-hover:scale-105" />
             </a>
           </div>
 

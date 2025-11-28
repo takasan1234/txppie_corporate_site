@@ -18,7 +18,7 @@ export function Footer({ onNavigate }: FooterProps) {
         <div className="grid md:grid-cols-3 gap-8 sm:gap-12 mb-8 sm:mb-12">
           <div>
             <div className="mb-4 sm:mb-6">
-              <img src={logoImage} alt="TxPPIE Logo" className="h-8 sm:h-10 w-auto object-contain" />
+              <img src={logoImage} alt="TxPPIE株式会社" className="h-8 sm:h-10 w-auto object-contain" />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
               患者の声を科学的根拠に変える
