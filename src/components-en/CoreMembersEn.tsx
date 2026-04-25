@@ -13,12 +13,14 @@ export function CoreMembersEn() {
         "Graduate School of Pharmaceutical Sciences, Osaka University",
         "Doctoral student",
       ],
+      objectPosition: "center 8%",
     },
     {
       position: "Director, COO & CTO",
       name: "Osamu Noyori",
       image: cooImage,
       credentials: ["Ph.D. in Veterinary Medicine", "Pharmacist"],
+      objectPosition: "center 0%",
     },
     {
       position: "Special Advisor",
@@ -29,6 +31,7 @@ export function CoreMembersEn() {
         "Professor Emeritus, Osaka University / Specially Appointed Professor, Institute for the Promotion of Degree Programs for Global Collaborations, Osaka University",
         "Director, Education and Research Development Center, Jikei University of Health Care Sciences Graduate School",
       ],
+      objectPosition: "center 25%",
     },
   ];
 
@@ -55,15 +58,14 @@ export function CoreMembersEn() {
 
               <div className="relative h-64 sm:h-80 bg-gray-100 flex items-center justify-center overflow-hidden">
                 {member.image ? (
-                    <img
+                  <img
                     src={member.image}
                     alt={member.name}
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     style={{
-                      objectPosition: "center -20%",
-                      transform: "scale(1.08)",
+                      objectPosition: member.objectPosition ?? "center center",
                     }}
-                />
+                  />
                 ) : (
                   <span className="text-gray-400">Photo</span>
                 )}
