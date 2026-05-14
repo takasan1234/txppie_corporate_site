@@ -5,21 +5,20 @@ import advisorImage from '@/assets/cf74f57f0f14e2c48b927a28037ec5284b06294f.png'
 export function CoreMembers() {
   const members = [
     {
-      position: "代表取締役 CEO",
+      position: "代表取締役 CEO / 共同創業者",
       name: "一二三 晴也",
       image: ceoImage,
       credentials: [
-        "修士(薬科学)",
-        "大阪大学大学院薬学研究科",
-        "博士課程在学中",
+        // "大阪大学 大学院薬学研究科\n修士 (薬科学)",
+        "大阪大学 大学院薬学研究科\n創成薬学専攻 ワクチン材料学分野\n博士課程在学中 (薬科学)",
       ],
       objectPosition: "center 8%",
     },
     {
-      position: "取締役 COO兼CTO",
+      position: "取締役 COO兼CTO / 共同創業者",
       name: "野依 修",
       image: cooImage,
-      credentials: ["博士(獣医学)", "薬剤師"],
+      credentials: ["北海道大学 大学院獣医学研究院\n人獣共通感染症国際共同研究所\n博士 (獣医学)", "長崎大学 高度感染症研究センター\n客員研究員", "薬剤師"],
       objectPosition: "center 0%",
     },
     {
@@ -27,9 +26,11 @@ export function CoreMembers() {
       name: "目加田 英輔",
       image: advisorImage,
       credentials: [
-        "博士(医学)",
-        "大阪大学名誉教授、大阪大学国際共創大学院学位プログラム推進機構 特任教授",
-        "滋慶医療科学大学・大学院 教育・研究開発センター 所長",
+        "大阪大学 微生物病研究所\n博士 (医学)",
+        "大阪大学 名誉教授",
+        // "大阪大学 微生物病研究所 元所長",
+        "大阪大学 国際共創大学院\n学位プログラム推進機構\n特任教授",
+        "滋慶医療科学大学・大学院\n教育・研究開発センター\n所長・客員教授",
       ],
       objectPosition: "center 25%",
     },
@@ -74,13 +75,17 @@ export function CoreMembers() {
               <div className="relative p-4 sm:p-6">
                 <p className="text-sm text-[#00897B] mb-2 tracking-wide uppercase">{member.position}</p>
                 <h3 className="text-gray-900 mb-3 sm:mb-4">{member.name}</h3>
-                <div className="space-y-1 sm:space-y-2">
-                  {member.credentials.map((cred, credIndex) => (
-                    <p key={credIndex} className="text-sm text-gray-600 leading-relaxed">
+                <div className="space-y-2 sm:space-y-3">
+                {member.credentials.map((cred, credIndex) => (
+                  <p
+                      key={credIndex}
+                      className="text-sm text-gray-600 whitespace-pre-line"
+                      style={{ lineHeight: 1.25 }}
+                    >
                       {cred}
-                    </p>
-                  ))}
-                </div>
+                  </p>
+                ))}
+              </div>
               </div>
             </div>
           ))}

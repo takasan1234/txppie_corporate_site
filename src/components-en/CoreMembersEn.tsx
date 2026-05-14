@@ -5,21 +5,23 @@ import advisorImage from '@/assets/cf74f57f0f14e2c48b927a28037ec5284b06294f.png'
 export function CoreMembersEn() {
   const members = [
     {
-      position: "Representative Director & CEO",
+      position: "CEO / Co-founder",
       name: "Seiya Hifumi",
       image: ceoImage,
       credentials: [
-        "Master of Pharmaceutical Sciences",
-        "Graduate School of Pharmaceutical Sciences, Osaka University",
-        "Doctoral student",
+        "Ph.D. student in Pharmaceutical Sciences Laboratory of Vaccine Materials\nGraduate School of Pharmaceutical Sciences\nOsaka University",
       ],
       objectPosition: "center 8%",
     },
     {
-      position: "Director, COO & CTO",
+      position: "COO & CTO / Co-founder",
       name: "Osamu Noyori",
       image: cooImage,
-      credentials: ["Ph.D. in Veterinary Medicine", "Pharmacist"],
+      credentials: [
+      "Ph.D. in Veterinary Medicine\nInternational Institute for Zoonosis Control\nFaculty of Veterinary Medicine\nHokkaido University",
+      "Visiting Researcher\nNational Research Center for the Control and Prevention of Infectious Diseases\nNagasaki University",
+      "Pharmacist"
+    ],
       objectPosition: "center 0%",
     },
     {
@@ -27,9 +29,11 @@ export function CoreMembersEn() {
       name: "Eisuke Mekada",
       image: advisorImage,
       credentials: [
-        "Ph.D. in Medicine",
-        "Professor Emeritus, Osaka University / Specially Appointed Professor, Institute for the Promotion of Degree Programs for Global Collaborations, Osaka University",
-        "Director, Education and Research Development Center, Jikei University of Health Care Sciences Graduate School",
+        "Ph.D. in Medicine\nResearch Institute for Microbial Diseases (RIMD)\nOsaka University",
+        "Professor Emeritus\nOsaka University",
+        // "Former Director\n Research Institute for Microbial Diseases (RIMD)\n Osaka University",
+        "Specially Appointed Professor\n Institute for Transdisciplinary Graduate Degree Programs\n Osaka University",
+        "Director and Visiting Professor\nEducation and Research Development Center\nJikei University of Health Care Sciences Graduate School",
       ],
       objectPosition: "center 25%",
     },
@@ -74,9 +78,13 @@ export function CoreMembersEn() {
               <div className="relative p-4 sm:p-6">
                 <p className="text-sm text-[#00897B] mb-2 tracking-wide uppercase">{member.position}</p>
                 <h3 className="text-gray-900 mb-3 sm:mb-4">{member.name}</h3>
-                <div className="space-y-1 sm:space-y-2">
+                <div className="space-y-2 sm:space-y-3">
                   {member.credentials.map((cred, credIndex) => (
-                    <p key={credIndex} className="text-sm text-gray-600 leading-relaxed">
+                    <p
+                      key={credIndex}
+                      className="text-sm text-gray-600 whitespace-pre-line"
+                      style={{ lineHeight: 1.25 }}
+                    >
                       {cred}
                     </p>
                   ))}
