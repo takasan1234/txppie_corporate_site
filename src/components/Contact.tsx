@@ -38,7 +38,7 @@ export function Contact() {
                   <div className="text-sm text-gray-500 mb-2 uppercase tracking-wide">Address</div>
                   <div className="text-gray-900 text-lg">
                     〒532-0023<br />
-                    大阪府大阪市淀川区東三国1丁目20-9 201号室
+                    大阪府大阪市淀川区東三国1丁目20-9-201
                   </div>
                 </div>
               </div>
