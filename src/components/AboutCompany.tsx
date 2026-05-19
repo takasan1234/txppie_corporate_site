@@ -17,7 +17,7 @@ export function AboutCompany() {
 
         {/* メイン説明 */}
         <div className="max-w-5xl mx-auto">
-          <div className="bg-white border border-gray-200 rounded-xl p-8 sm:p-12 lg:p-16 text-center shadow-sm">
+          <div className="bg-white border border-gray-200 rounded-lg p-8 sm:p-12 lg:p-16 text-center">
             <p className="text-gray-900 text-lg leading-relaxed mb-6">
               <span className="text-3xl text-[#00897B]">TxPPIE</span>は<br />
               3つの"T"
@@ -43,7 +43,7 @@ export function AboutCompany() {
               <img 
                 src={txppieImage} 
                 alt="TxPPIE - 患者と市民がみんなで創る新しい研究・医療のかたち" 
-                className="w-full max-w-2xl mx-auto rounded-lg shadow-sm opacity-90"
+                className="w-full max-w-2xl mx-auto rounded-lg border border-gray-200 opacity-90"
               />
             </div>
           </div>

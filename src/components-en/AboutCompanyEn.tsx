@@ -15,7 +15,7 @@ export function AboutCompanyEn() {
         </div>
 
         <div className="max-w-5xl mx-auto">
-          <div className="bg-white border border-gray-200 rounded-xl p-8 sm:p-12 lg:p-16 text-center shadow-sm">
+          <div className="bg-white border border-gray-200 rounded-lg p-8 sm:p-12 lg:p-16 text-center">
             <p className="text-gray-900 text-lg leading-relaxed mb-6">
               <span className="text-3xl text-[#00897B]">TxPPIE</span> is the company name formed by combining
               the three “T”s
@@ -39,7 +39,7 @@ export function AboutCompanyEn() {
               <img
                 src={txppieImage}
                 alt="TxPPIE — a new model of research and healthcare co-created by patients and the public"
-                className="w-full max-w-2xl mx-auto rounded-lg shadow-sm opacity-90"
+                className="w-full max-w-2xl mx-auto rounded-lg border border-gray-200 opacity-90"
               />
             </div>
           </div>

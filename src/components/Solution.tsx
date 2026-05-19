@@ -6,13 +6,11 @@ import processFlowImage from '@/assets/26e635c9fd4dcec3cd3005781af01c292f934752.
 
 export function Solution() {
   return (
-    <section id="solution" className="py-20 sm:py-32 bg-gray-50 relative overflow-hidden">
-      {/* Background Accent */}
-      <div className="absolute top-1/4 left-0 w-1/2 h-1/2 bg-gradient-to-r from-[#00897B]/5 to-transparent" />
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
+    <>
+    <section id="solution" className="py-20 sm:py-32 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         {/* 1. VoiceAtlasとは */}
-        <div className="mb-24 sm:mb-32">
+        <div>
           <div className="mb-12 sm:mb-16">
             <p className="text-sm text-[#00897B] mb-3 sm:mb-4 tracking-[0.2em] uppercase">
               Platform
@@ -20,7 +18,7 @@ export function Solution() {
             <h2 className="text-gray-900 mb-4 sm:mb-6">VoiceAtlasとは</h2>
             <div className="w-20 h-1 bg-gradient-to-r from-[#00897B] to-transparent" />
           </div>
-          <div className="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 lg:p-12 shadow-sm">
+          <div className="bg-white border border-gray-200 rounded-lg p-6 sm:p-8 lg:p-12">
             <p className="text-gray-700 text-center text-lg leading-relaxed mb-8 sm:mb-12 max-w-5xl mx-auto">
               <span className="text-[#00897B]">医薬品副作用</span>や<span className="text-[#00897B]">難病・希少疾患</span>領域の<span className="text-2xl text-[#00897B] inline-block mx-1">「医療情報不足」</span>を解決するため、<span className="text-[#00897B]">患者起点</span>で臨床情報・ゲノム情報を集積・解析するDXプラットフォーム。
               独自のデータベースを基盤とした事業展開により、<span className="text-[#00897B]">研究から創薬まで一貫して支援</span>します。
@@ -32,9 +30,13 @@ export function Solution() {
             />
           </div>
         </div>
+      </div>
+    </section>
 
+    <section className="py-20 sm:py-32 bg-[#eef8f5]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         {/* 2. 仕組み */}
-        <div className="mb-24 sm:mb-32">
+        <div>
           <div className="mb-12 sm:mb-16">
             <p className="text-sm text-[#00897B] mb-3 sm:mb-4 tracking-[0.2em] uppercase">
               How It Works
@@ -42,7 +44,7 @@ export function Solution() {
             <h3 className="text-gray-900 mb-4 sm:mb-6">情報収集 & 解析プロセス</h3>
             <div className="w-20 h-1 bg-gradient-to-r from-[#00897B] to-transparent" />
           </div>
-          <div className="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 lg:p-12 shadow-sm">
+          <div className="bg-white border border-gray-200 rounded-lg p-6 sm:p-8 lg:p-12">
             <p className="text-gray-700 text-center text-lg leading-relaxed mb-8 sm:mb-12 max-w-5xl mx-auto">
               患者会と連携し、全国の<span className="text-[#00897B]">患者起点でカルテや検体を迅速に集積</span>できるプラットフォームを構築・運用します。集積されたデータは、<span className="text-[#00897B]">医療データ解析とゲノム情報解析</span>によって統合され、<span className="text-[#00897B]">独自のデータベース</span>として研究機関や製薬企業に提供されます。
             </p>
@@ -53,7 +55,11 @@ export function Solution() {
             />
           </div>
         </div>
+      </div>
+    </section>
 
+    <section className="py-20 sm:py-32 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         {/* 3. ビジネスモデル */}
         <div>
           <div className="mb-12 sm:mb-16">
@@ -69,7 +75,7 @@ export function Solution() {
             <img 
               src={businessFlowImage} 
               alt="ビジネスフロー図" 
-              className="w-full max-w-3xl mx-auto rounded-xl shadow-lg"
+              className="w-full max-w-3xl mx-auto rounded-lg border border-gray-200"
             />
           </div>
 
@@ -108,9 +114,8 @@ export function Solution() {
             ].map((service, index) => (
               <div
                 key={index}
-                className="group relative bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 hover:border-[#00897B]/50 hover:shadow-xl transition-all"
+                className="relative bg-white border border-gray-200 rounded-lg p-6 sm:p-8 hover:border-[#00897B]/40 hover:bg-gray-50 transition-colors"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-[#00897B]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl" />
                 <div className="relative z-10">
                   <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
                     <div className={`${service.color === 'blue' ? 'bg-blue-600' : 'bg-[#00897B]'} text-white p-2 sm:p-3 rounded-xl`}>
@@ -133,5 +138,6 @@ export function Solution() {
         </div>
       </div>
     </section>
+    </>
   );
 }

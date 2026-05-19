@@ -17,6 +17,8 @@
       input: {
         main: resolve(__dirname, 'index.html'),
         en: resolve(__dirname, 'en/index.html'),
+        news: resolve(__dirname, "news/index.html"),
+        enNews: resolve(__dirname, "en/news/index.html"),
       },
     },
     },

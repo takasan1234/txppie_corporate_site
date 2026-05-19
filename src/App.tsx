@@ -10,7 +10,9 @@ import { About } from "./components/About";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import { PrivacyPolicy } from "./components/PrivacyPolicy";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { WhatsNew } from "./components/WhatsNew";
+import { NewsPage } from "./pages/NewsPage";
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState("home");
@@ -19,6 +21,31 @@ export default function App() {
     setCurrentPage(page);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  useEffect(() => {
+    const hash = window.location.hash;
+
+    if (!hash) return;
+
+    const id = decodeURIComponent(hash.replace("#", ""));
+
+    const timer = window.setTimeout(() => {
+      const element = document.getElementById(id);
+
+      if (element) {
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }, 100);
+
+    return () => window.clearTimeout(timer);
+  }, []);
+
+  if (currentPage === "news") {
+    return <NewsPage />;
+  }
 
   if (currentPage === "privacy") {
     return (
@@ -29,7 +56,6 @@ export default function App() {
       </div>
     );
   }
-
   return (
     <div className="min-h-screen bg-white">
       <Header onNavigate={handleNavigate} />
@@ -40,6 +66,7 @@ export default function App() {
       <CeoMessage />
       <CoreMembers />
       <Partners />
+      <WhatsNew />
       <About />
       <Contact />
       <Footer onNavigate={handleNavigate} />
