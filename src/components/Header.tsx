@@ -1,27 +1,27 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import logoImage from '@/assets/18a91d08cf9a9d8b2794072b0e03df58b07f146b.png';
+import logoImage from "@/assets/18a91d08cf9a9d8b2794072b0e03df58b07f146b.png";
 
 interface HeaderProps {
   onNavigate?: (page: string) => void;
+  logoHref?: string;
 }
 
-export function Header({ onNavigate }: HeaderProps) {
+export function Header({ onNavigate, logoHref = "/" }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
-    { label: "Mission", href: "#mission" },
-    { label: "Solution", href: "#solution" },
-    { label: "About", href: "#about" },
-    { label: "Contact", href: "#contact" },
+    { label: "Mission", href: "/#mission" },
+    { label: "Solution", href: "/#solution" },
+    { label: "News", href: "/#news" },
+    { label: "About", href: "/#about" },
+    { label: "Contact", href: "/#contact" },
   ];
 
   const handleLogoClick = (e: React.MouseEvent) => {
-    e.preventDefault();
     if (onNavigate) {
+      e.preventDefault();
       onNavigate("home");
-    } else {
-      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
 
@@ -30,9 +30,17 @@ export function Header({ onNavigate }: HeaderProps) {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center">
-            <a href="#" onClick={handleLogoClick} className="flex items-center gap-3 group">
+            <a
+              href={logoHref}
+              onClick={handleLogoClick}
+              className="flex items-center gap-3 group"
+            >
               {/* ロゴ画像 */}
-              <img src={logoImage} alt="TxPPIE株式会社" className="h-10 w-auto object-contain transition-transform group-hover:scale-105" />
+              <img
+                src={logoImage}
+                alt="TxPPIE株式会社"
+                className="h-10 w-auto object-contain transition-transform group-hover:scale-105"
+              />
             </a>
           </div>
 

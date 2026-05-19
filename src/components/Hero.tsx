@@ -1,13 +1,13 @@
-import { motion } from 'motion/react';
-import { ArrowRight } from 'lucide-react';
-import voiceAtlasLogo from '@/assets/32594166e15459267cac7282a4e526062ff0bd88.png';
+import { motion } from "motion/react";
+import { ArrowRight } from "lucide-react";
+import voiceAtlasLogo from "@/assets/32594166e15459267cac7282a4e526062ff0bd88.png";
 
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#f8fffe] to-white">
       {/* Grid Background */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#e5e7eb_1px,transparent_1px),linear-gradient(to_bottom,#e5e7eb_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-30" />
-      
+
       {/* Gradient Overlays */}
       <div className="absolute inset-0">
         <motion.div
@@ -45,9 +45,9 @@ export function Hero() {
             transition={{ duration: 1, ease: "easeOut" }}
             className="mb-12"
           >
-            <img 
-              src={voiceAtlasLogo} 
-              alt="VoiceAtlas Logo" 
+            <img
+              src={voiceAtlasLogo}
+              alt="VoiceAtlas Logo"
               className="h-24 sm:h-32 w-auto mx-auto mb-8"
             />
           </motion.div>
@@ -58,7 +58,8 @@ export function Hero() {
             transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
             className="text-5xl sm:text-6xl mb-8 text-gray-900 max-w-5xl mx-auto"
           >
-            患者の声を<br className="sm:hidden" />
+            患者の声を
+            <br className="sm:hidden" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00897B] to-[#00BFA5]">
               科学的根拠
             </span>
@@ -71,8 +72,11 @@ export function Hero() {
             transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
             className="text-lg text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed"
           >
-            <span className="text-[#00897B]">医療情報不足</span>という社会課題に立ち向かい、<br className="hidden sm:block" />
-            <span className="text-[#00897B]">患者起点</span>で医療情報を集積・解析するDXプラットフォームを提供します
+            <span className="text-[#00897B]">医療情報不足</span>
+            という社会課題に立ち向かい、
+            <br className="hidden sm:block" />
+            <span className="text-[#00897B]">患者起点</span>
+            で医療情報を集積・解析するDXプラットフォームを提供します
           </motion.p>
 
           <motion.div
@@ -86,7 +90,10 @@ export function Hero() {
               className="group inline-flex items-center gap-2 bg-[#00897B] text-white px-8 py-4 rounded-full hover:bg-[#00BFA5] transition-all shadow-lg hover:shadow-[#00897B]/30 hover:shadow-2xl"
             >
               お問い合わせ
-              <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
+              <ArrowRight
+                className="group-hover:translate-x-1 transition-transform"
+                size={20}
+              />
             </a>
             <a
               href="#mission"

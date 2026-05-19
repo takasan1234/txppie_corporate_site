@@ -5,11 +5,10 @@ import processFlowImage from '@/assets-en/mission-diagram-en.png';
 
 export function SolutionEn() {
   return (
-    <section id="solution" className="py-20 sm:py-32 bg-gray-50 relative overflow-hidden">
-      <div className="absolute top-1/4 left-0 w-1/2 h-1/2 bg-gradient-to-r from-[#00897B]/5 to-transparent" />
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
-        <div className="mb-24 sm:mb-32">
+    <>
+    <section id="solution" className="py-20 sm:py-32 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+        <div>
           <div className="mb-12 sm:mb-16">
             <p className="text-sm text-[#00897B] mb-3 sm:mb-4 tracking-[0.2em] uppercase">
               Platform
@@ -17,7 +16,7 @@ export function SolutionEn() {
             <h2 className="text-gray-900 mb-4 sm:mb-6">What is VoiceAtlas?</h2>
             <div className="w-20 h-1 bg-gradient-to-r from-[#00897B] to-transparent" />
           </div>
-          <div className="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 lg:p-12 shadow-sm">
+          <div className="bg-white border border-gray-200 rounded-lg p-6 sm:p-8 lg:p-12">
             <p className="text-gray-700 text-center text-lg leading-relaxed mb-8 sm:mb-12 max-w-5xl mx-auto">
               VoiceAtlas is a DX platform that collects and analyzes clinical and genomic data
               from a <span className="text-[#00897B]">patient-driven</span> perspective
@@ -34,8 +33,12 @@ export function SolutionEn() {
             />
           </div>
         </div>
+      </div>
+    </section>
 
-        <div className="mb-24 sm:mb-32">
+    <section className="py-20 sm:py-32 bg-[#eef8f5]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+        <div>
           <div className="mb-12 sm:mb-16">
             <p className="text-sm text-[#00897B] mb-3 sm:mb-4 tracking-[0.2em] uppercase">
               How It Works
@@ -43,7 +46,7 @@ export function SolutionEn() {
             <h3 className="text-gray-900 mb-4 sm:mb-6">Data Collection & Analysis Process</h3>
             <div className="w-20 h-1 bg-gradient-to-r from-[#00897B] to-transparent" />
           </div>
-          <div className="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 lg:p-12 shadow-sm">
+          <div className="bg-white border border-gray-200 rounded-lg p-6 sm:p-8 lg:p-12">
             <p className="text-gray-700 text-center text-lg leading-relaxed mb-8 sm:mb-12 max-w-5xl mx-auto">
               By partnering with patient associations, we build and operate a platform that can rapidly collect
               medical records and biological samples from a <span className="text-[#00897B]">patient-driven</span> starting point across Japan.
@@ -58,7 +61,11 @@ export function SolutionEn() {
             />
           </div>
         </div>
+      </div>
+    </section>
 
+    <section className="py-20 sm:py-32 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         <div>
           <div className="mb-12 sm:mb-16">
             <p className="text-sm text-[#00897B] mb-3 sm:mb-4 tracking-[0.2em] uppercase">
@@ -72,7 +79,7 @@ export function SolutionEn() {
             <img
               src={businessFlowImage}
               alt="Business flow diagram"
-              className="w-full max-w-3xl mx-auto rounded-xl shadow-lg"
+              className="w-full max-w-3xl mx-auto rounded-lg border border-gray-200"
             />
           </div>
 
@@ -109,9 +116,8 @@ export function SolutionEn() {
             ].map((service, index) => (
               <div
                 key={index}
-                className="group relative bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 hover:border-[#00897B]/50 hover:shadow-xl transition-all"
+                className="relative bg-white border border-gray-200 rounded-lg p-6 sm:p-8 hover:border-[#00897B]/40 hover:bg-gray-50 transition-colors"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-[#00897B]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl" />
                 <div className="relative z-10">
                   <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
                     <div className={`${service.color === 'blue' ? 'bg-blue-600' : 'bg-[#00897B]'} text-white p-2 sm:p-3 rounded-xl`}>
@@ -134,5 +140,6 @@ export function SolutionEn() {
         </div>
       </div>
     </section>
+    </>
   );
 }

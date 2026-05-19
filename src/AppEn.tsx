@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { HeaderEn } from "./components-en/HeaderEn";
 import { HeroEn } from "./components-en/HeroEn";
 import { AboutCompanyEn } from "./components-en/AboutCompanyEn";
@@ -11,6 +11,7 @@ import { AboutEn } from "./components-en/AboutEn";
 import { ContactEn } from "./components-en/ContactEn";
 import { FooterEn } from "./components-en/FooterEn";
 import { PrivacyPolicyEn } from "./components-en/PrivacyPolicyEn";
+import { WhatsNewEn } from "./components-en/WhatsNewEn";
 
 export default function AppEn() {
   const [currentPage, setCurrentPage] = useState("home");
@@ -19,6 +20,27 @@ export default function AppEn() {
     setCurrentPage(page);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  useEffect(() => {
+    const hash = window.location.hash;
+
+    if (!hash) return;
+
+    const id = decodeURIComponent(hash.replace("#", ""));
+
+    const timer = window.setTimeout(() => {
+      const element = document.getElementById(id);
+
+      if (element) {
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }, 100);
+
+    return () => window.clearTimeout(timer);
+  }, []);
 
   if (currentPage === "privacy") {
     return (
@@ -40,6 +62,7 @@ export default function AppEn() {
       <CeoMessageEn />
       <CoreMembersEn />
       <PartnersEn />
+      <WhatsNewEn />
       <AboutEn />
       <ContactEn />
       <FooterEn onNavigate={handleNavigate} />

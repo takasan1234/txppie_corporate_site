@@ -35,9 +35,8 @@ export function MissionEn() {
           {issues.map((issue, index) => (
             <div
               key={index}
-              className="group relative bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-2xl p-6 sm:p-8 hover:border-[#00897B]/50 hover:shadow-xl transition-all"
+              className="relative bg-white border border-gray-200 rounded-lg p-6 sm:p-8 hover:border-[#00897B]/40 hover:bg-gray-50 transition-colors"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-[#00897B]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl" />
               <div className="relative z-10">
                 <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
                   <div className="p-2 sm:p-3 bg-[#00897B]/10 rounded-xl">
@@ -52,7 +51,7 @@ export function MissionEn() {
           ))}
         </div>
 
-        <div className="bg-gradient-to-r from-[#00897B] to-[#00695C] rounded-2xl p-6 sm:p-8 text-center mb-8 sm:mb-12">
+        <div className="bg-[#00897B] rounded-lg p-6 sm:p-8 text-center mb-8 sm:mb-12">
           <p className="text-lg text-white">
             Many patients still suffer today without access to adequate support or compensation.
           </p>

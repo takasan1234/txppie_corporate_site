@@ -2,9 +2,7 @@ import { Mail, MapPin } from "lucide-react";
 
 export function ContactEn() {
   return (
-    <section id="contact" className="py-20 sm:py-32 bg-white relative overflow-hidden">
-      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-[#00897B]/10 rounded-full blur-[120px]" />
-
+    <section id="contact" className="py-20 sm:py-32 bg-gray-50 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
         <div className="mb-12 sm:mb-16">
           <p className="text-sm text-[#00897B] mb-3 sm:mb-4 tracking-[0.2em] uppercase">
@@ -19,7 +17,7 @@ export function ContactEn() {
           <p className="text-gray-600 mb-8 sm:mb-12 text-lg text-center">
             For questions about our services, media inquiries, or partnership opportunities.
           </p>
-          <div className="bg-gradient-to-br from-gray-50 to-white border border-gray-200 rounded-2xl p-8 sm:p-12">
+          <div className="bg-white border border-gray-200 rounded-lg p-8 sm:p-12">
             <div className="space-y-6 sm:space-y-8">
               <div className="flex items-start gap-4 sm:gap-6">
                 <div className="p-3 sm:p-4 bg-[#00897B]/10 rounded-xl">
