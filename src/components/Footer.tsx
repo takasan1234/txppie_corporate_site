@@ -4,7 +4,36 @@ interface FooterProps {
   onNavigate?: (page: string) => void;
 }
 
-export function Footer({ onNavigate: _onNavigate }: FooterProps) {
+export function Footer({ onNavigate }: FooterProps) {
+  const handlePolicyClick = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    page: string,
+  ) => {
+    if (!onNavigate) return;
+
+    event.preventDefault();
+    onNavigate(page);
+  };
+
+  const handleSectionClick = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) => {
+    if (!onNavigate) return;
+
+    event.preventDefault();
+    onNavigate("home");
+    window.history.pushState(null, "", href);
+
+    const id = href.split("#")[1];
+    window.setTimeout(() => {
+      document.getElementById(id)?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }, 100);
+  };
+
   return (
     <footer className="bg-gray-900 border-t border-gray-800 py-8 sm:py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
@@ -32,6 +61,7 @@ export function Footer({ onNavigate: _onNavigate }: FooterProps) {
               <li>
                 <a
                   href="/#mission"
+                  onClick={(event) => handleSectionClick(event, "/#mission")}
                   className="hover:text-[#00897B] transition-colors"
                 >
                   Mission
@@ -40,6 +70,7 @@ export function Footer({ onNavigate: _onNavigate }: FooterProps) {
               <li>
                 <a
                   href="/#solution"
+                  onClick={(event) => handleSectionClick(event, "/#solution")}
                   className="hover:text-[#00897B] transition-colors"
                 >
                   Solution
@@ -48,6 +79,7 @@ export function Footer({ onNavigate: _onNavigate }: FooterProps) {
               <li>
                 <a
                   href="/#news"
+                  onClick={(event) => handleSectionClick(event, "/#news")}
                   className="hover:text-[#00897B] transition-colors"
                 >
                   News
@@ -56,6 +88,7 @@ export function Footer({ onNavigate: _onNavigate }: FooterProps) {
               <li>
                 <a
                   href="/#about"
+                  onClick={(event) => handleSectionClick(event, "/#about")}
                   className="hover:text-[#00897B] transition-colors"
                 >
                   About
@@ -64,6 +97,7 @@ export function Footer({ onNavigate: _onNavigate }: FooterProps) {
               <li>
                 <a
                   href="/#contact"
+                  onClick={(event) => handleSectionClick(event, "/#contact")}
                   className="hover:text-[#00897B] transition-colors"
                 >
                   Contact
@@ -95,9 +129,18 @@ export function Footer({ onNavigate: _onNavigate }: FooterProps) {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 text-sm text-gray-500">
+        <div className="border-t border-gray-800 pt-6 sm:pt-8 flex flex-col sm:flex-row items-start justify-between gap-3 sm:gap-4 text-sm text-gray-500">
           <p>&copy; 2025 TxPPIE株式会社. All rights reserved.</p>
-          <span>プライバシーポリシー（近日公開）</span>
+          <div className="ml-auto flex flex-col items-end gap-2 text-right">
+            <a
+              href="/#site-policy"
+              onClick={(event) => handlePolicyClick(event, "site-policy")}
+              className="hover:text-[#00897B] transition-colors"
+            >
+              サイトポリシー
+            </a>
+            <span>プライバシーポリシー</span>
+          </div>
         </div>
       </div>
     </footer>

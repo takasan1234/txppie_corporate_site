@@ -25,6 +25,26 @@ export function Header({ onNavigate, logoHref = "/" }: HeaderProps) {
     }
   };
 
+  const handleSectionClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) => {
+    if (!onNavigate) return;
+
+    e.preventDefault();
+    setIsMenuOpen(false);
+    onNavigate("home");
+    window.history.pushState(null, "", href);
+
+    const id = href.split("#")[1];
+    window.setTimeout(() => {
+      document.getElementById(id)?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }, 100);
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-xl border-b border-gray-200 z-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
@@ -50,6 +70,7 @@ export function Header({ onNavigate, logoHref = "/" }: HeaderProps) {
               <a
                 key={item.label}
                 href={item.href}
+                onClick={(event) => handleSectionClick(event, item.href)}
                 className="text-sm text-gray-600 hover:text-[#00897B] transition-colors tracking-wide uppercase"
               >
                 {item.label}
@@ -81,7 +102,7 @@ export function Header({ onNavigate, logoHref = "/" }: HeaderProps) {
                 key={item.label}
                 href={item.href}
                 className="block py-3 text-gray-600 hover:text-[#00897B] transition-colors uppercase tracking-wide"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={(event) => handleSectionClick(event, item.href)}
               >
                 {item.label}
               </a>

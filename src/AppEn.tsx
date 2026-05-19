@@ -11,6 +11,7 @@ import { AboutEn } from "./components-en/AboutEn";
 import { ContactEn } from "./components-en/ContactEn";
 import { FooterEn } from "./components-en/FooterEn";
 import { PrivacyPolicyEn } from "./components-en/PrivacyPolicyEn";
+import { SitePolicyEn } from "./components-en/SitePolicyEn";
 import { WhatsNewEn } from "./components-en/WhatsNewEn";
 
 export default function AppEn() {
@@ -27,6 +28,11 @@ export default function AppEn() {
     if (!hash) return;
 
     const id = decodeURIComponent(hash.replace("#", ""));
+
+    if (id === "privacy" || id === "site-policy") {
+      setCurrentPage(id);
+      return;
+    }
 
     const timer = window.setTimeout(() => {
       const element = document.getElementById(id);
@@ -47,6 +53,16 @@ export default function AppEn() {
       <div className="min-h-screen bg-white">
         <HeaderEn onNavigate={handleNavigate} />
         <PrivacyPolicyEn />
+        <FooterEn onNavigate={handleNavigate} />
+      </div>
+    );
+  }
+
+  if (currentPage === "site-policy") {
+    return (
+      <div className="min-h-screen bg-white">
+        <HeaderEn onNavigate={handleNavigate} />
+        <SitePolicyEn />
         <FooterEn onNavigate={handleNavigate} />
       </div>
     );

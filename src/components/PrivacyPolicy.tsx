@@ -2,7 +2,7 @@ export function PrivacyPolicy() {
   return (
     <div className="pt-24 pb-16 bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-center mb-12">
+        <h1 className="text-center text-2xl sm:text-3xl font-bold mb-12">
           TxPPIE 株式会社 プライバシーポリシー（改訂版）
         </h1>
 

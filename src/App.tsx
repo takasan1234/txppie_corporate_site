@@ -10,6 +10,7 @@ import { About } from "./components/About";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import { PrivacyPolicy } from "./components/PrivacyPolicy";
+import { SitePolicy } from "./components/SitePolicy";
 import { useEffect, useState } from "react";
 import { WhatsNew } from "./components/WhatsNew";
 import { NewsPage } from "./pages/NewsPage";
@@ -28,6 +29,11 @@ export default function App() {
     if (!hash) return;
 
     const id = decodeURIComponent(hash.replace("#", ""));
+
+    if (id === "privacy" || id === "site-policy") {
+      setCurrentPage(id);
+      return;
+    }
 
     const timer = window.setTimeout(() => {
       const element = document.getElementById(id);
@@ -56,6 +62,17 @@ export default function App() {
       </div>
     );
   }
+
+  if (currentPage === "site-policy") {
+    return (
+      <div className="min-h-screen bg-white">
+        <Header onNavigate={handleNavigate} />
+        <SitePolicy />
+        <Footer onNavigate={handleNavigate} />
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-white">
       <Header onNavigate={handleNavigate} />

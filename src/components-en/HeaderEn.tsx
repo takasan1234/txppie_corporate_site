@@ -25,6 +25,26 @@ export function HeaderEn({ onNavigate, logoHref = "/en/" }: HeaderEnProps) {
     }
   };
 
+  const handleSectionClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) => {
+    if (!onNavigate) return;
+
+    e.preventDefault();
+    setIsMenuOpen(false);
+    onNavigate("home");
+    window.history.pushState(null, "", href);
+
+    const id = href.split("#")[1];
+    window.setTimeout(() => {
+      document.getElementById(id)?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }, 100);
+  };
+
   const handlePrivacyClick = (e: React.MouseEvent) => {
     e.preventDefault();
     if (onNavigate) onNavigate("privacy");
@@ -53,6 +73,7 @@ export function HeaderEn({ onNavigate, logoHref = "/en/" }: HeaderEnProps) {
               <a
                 key={item.label}
                 href={item.href}
+                onClick={(event) => handleSectionClick(event, item.href)}
                 className="text-sm text-gray-600 hover:text-[#00897B] transition-colors tracking-wide uppercase"
               >
                 {item.label}
@@ -89,7 +110,7 @@ export function HeaderEn({ onNavigate, logoHref = "/en/" }: HeaderEnProps) {
                 key={item.label}
                 href={item.href}
                 className="block py-3 text-gray-600 hover:text-[#00897B] transition-colors uppercase tracking-wide"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={(event) => handleSectionClick(event, item.href)}
               >
                 {item.label}
               </a>
